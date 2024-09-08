@@ -1,0 +1,119 @@
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 94%;
+    grid-template-columns: 7rem auto 14rem;
+  }
+  aside .sidebar h3 {
+    display: none;
+  }
+
+  aside .sidebar a:last-child {
+    position: relative;
+    margin-top: 1.8rem;
+  }
+  main .insights {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  aside {
+    position: fixed;
+    width: 18rem;
+    z-index: 3;
+    background: var(--clr-white);
+    display: none;
+    animation: menuAi 1s forwards;
+  }
+
+  @keyframes menuAi {
+    to {
+      left: 0;
+    }
+  }
+
+  aside .logo h2 {
+    display: inline;
+  }
+
+  aside .sidebar h3 {
+    display: inline;
+  }
+
+  aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  aside .top div.close span {
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    font-size: 35px;
+  }
+
+  .right .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+    background: rgb(8, 0, 17);
+    width: 100%;
+    height: 4.6rem;
+    z-index: 2;
+    box-shadow: 0.1rem 1rem var(--clr-white);
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .right .top p,
+  b {
+    color: var(--clr-white);
+  }
+
+  main .insights {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.6rem;
+    padding: 40px;
+  }
+
+  main .recent_order {
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  .right .top .profile {
+    position: absolute;
+    left: 70%;
+  }
+
+  .right .recent_updates {
+    padding: 30px;
+  }
+  .right .sales_analytics {
+    padding: 30px;
+  }
+  .right .sales_analytics .items {
+    padding: 30px;
+  }
+
+  .right .top button {
+    display: inline-block;
+    background: transparent;
+    color: var(--clr-white);
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+  }
+}
